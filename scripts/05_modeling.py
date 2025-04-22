@@ -28,3 +28,19 @@ if __name__ == '__main__':
     }
     joblib.dump(lr, os.path.join('outputs','models','lr_model.pkl'))
 
+    # Random Forest
+    rf = RandomForestRegressor(n_estimators=100, random_state=42)
+    rf.fit(X_train, y_train)
+    preds_rf = rf.predict(X_test)
+    rf_metrics = {
+        'model': 'RandomForest',
+        'MAE': metrics.mean_absolute_error(y_test, preds_rf),
+        'MSE': metrics.mean_squared_error(y_test, preds_rf),
+        'R2': metrics.r2_score(y_test, preds_rf)
+    }
+    joblib.dump(rf, os.path.join('outputs','models','rf_model.pkl'))
+
+    # Save metrics
+    metrics_df = pd.DataFrame([lr_metrics, rf_metrics])
+    metrics_df.to_csv(os.path.join('outputs','tables','model_performance.csv'),
+                      index=False)

@@ -56,3 +56,17 @@ project-root/
    python scripts/05_modeling.py
    ```  
 
+## Requirements
+
+- Python 3.8 or higher  
+- pandas  
+- numpy  
+- matplotlib  
+- scikit-learn  
+- joblib  
+
+## Acknowledgments
+
+dataset name: QS World University Rankings 2025  
+dataset author: Melissa Monfared  
+dataset source: https://www.kaggle.com/datasets/melissamonfared/qs-world-university-rankings-2025

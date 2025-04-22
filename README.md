@@ -26,3 +26,33 @@ project-root/
     └── models/
 ```  
 
+## Usage
+
+1. **Setup the Project:**  
+   - Clone the repository.  
+   - Ensure you have Python installed.  
+   - Install required dependencies using the requirements.txt file.  
+   ```bash
+   pip install -r requirements.txt
+   ```  
+2. **Load Raw Data:**  
+   ```bash
+   python scripts/01_load_data.py
+   ```  
+3. **Preprocess Data:**  
+   ```bash
+   python scripts/02_preprocess_data.py
+   ```  
+4. **Exploratory Analysis:**  
+   ```bash
+   python scripts/03_exploratory_analysis.py
+   ```  
+5. **Generate Visualizations:**  
+   ```bash
+   python scripts/04_visualization.py
+   ```  
+6. **Train & Evaluate Models:**  
+   ```bash
+   python scripts/05_modeling.py
+   ```  
+
